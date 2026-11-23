@@ -1,0 +1,5 @@
+config.php
+storage/
+tests/tmp/
+*.zip
+.DS_Store
