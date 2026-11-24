@@ -9,6 +9,8 @@ return [
   'public_url' => 'https://loaninwallet.in',  // used for the tile stats calls
   'setup_key' => 'PUT_A_LONG_RANDOM_TEXT_HERE', // only for the first-time setup page; remove after
   // One secret per app, 40+ random characters each. The SAME value goes in that app's config.php as 'sso_secret'.
+  // Shared by the portal, Mailer and Ops Room for the single upload and paid/part-payment sync (40+ random chars).
+  'sync_secret' => 'PUT_40+_RANDOM_CHARS_FOR_SYNC',
   'sso_secrets' => [
     'ops'        => 'PUT_40+_RANDOM_CHARS_FOR_OPS',
     'attendance' => 'PUT_40+_RANDOM_CHARS_FOR_ATTENDANCE',

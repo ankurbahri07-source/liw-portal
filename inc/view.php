@@ -14,7 +14,7 @@ function page_head(string $title, ?array $u = null): void
     echo '<header class="top"><a class="brand" href="' . esc(url()) . '">' . $company . '</a>';
     if ($u) {
         echo '<nav>';
-        if ((int)$u['is_owner']) echo '<a href="' . esc(url('users.php')) . '">Users</a><a href="' . esc(url('audit.php')) . '">Activity log</a>';
+        if ((int)$u['is_owner']) echo '<a href="' . esc(url('upload.php')) . '">Upload CRM file</a><a href="' . esc(url('users.php')) . '">Users</a><a href="' . esc(url('audit.php')) . '">Activity log</a>';
         echo '<a href="' . esc(url('account.php')) . '">' . esc($u['name']) . '</a>'
             . '<form method="post" action="' . esc(url('logout.php')) . '" class="inl">' . csrf_field() . '<button class="link">Sign out</button></form></nav>';
     }

@@ -18,3 +18,6 @@ Each app has one secret (40+ random characters). The SAME text goes in the porta
 4. Add users + access in the portal Users screen (same username as the app; mobile for Attendance).
 5. Point each app's deploy at its new folder.
 6. Switch: old subdomains 301 to the new paths; set `sso_only` once everyone uses the portal.
+
+## Single CRM upload (owner only)
+`upload.php` sends the Excel file to Mailer (`portal_upload`), which imports it and returns the rows, then the portal forwards those rows to Ops Room (`portal_import`). Both calls are signed with `sync_secret` (same value in the portal, Mailer `LIW_SYNC_SECRET` and Ops Room `sync_secret`). Safe to repeat: both apps update existing loans instead of duplicating them.

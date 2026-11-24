@@ -17,7 +17,7 @@ function apps(): array
             'summary' => '/attendance/api/index.php?r=portal/summary', 'icon' => '🕘',
             'desc' => 'Check-in, leave, WFH and reports',
             'roles' => ['employee' => 'Employee', 'admin' => 'Admin (with the permissions ticked)', 'super_admin' => 'Super admin (everything)'],
-            'perms' => ['alerts' => 'Alerts', 'approvals' => 'Approvals + edit attendance', 'reports' => 'Reports',
+            'perms' => ['alerts' => 'Alerts', 'approvals' => 'Approvals', 'edit_attendance' => 'Edit or remove anyone\'s attendance', 'reports' => 'Reports',
                         'employees' => 'Employees', 'settings' => 'Settings', 'locations' => 'Locations'],
         ],
         'mailer' => [
