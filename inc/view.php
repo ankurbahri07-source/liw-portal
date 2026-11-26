@@ -11,7 +11,7 @@ function page_head(string $title, ?array $u = null): void
     echo '<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">'
         . '<meta name="robots" content="noindex,nofollow"><title>' . esc($title) . ' · ' . $company . '</title>'
         . '<link rel="stylesheet" href="' . esc(url('assets/portal.css')) . '?v=1"></head><body>';
-    echo '<header class="top"><a class="brand" href="' . esc(url()) . '">' . $company . '</a>';
+    echo '<header class="top"><a class="brand" href="' . esc(url()) . '"><img src="' . esc(url('assets/logo-icon.png')) . '" alt=""> ' . $company . '</a>';
     if ($u) {
         echo '<nav>';
         if ((int)$u['is_owner']) echo '<a href="' . esc(url('upload.php')) . '">Upload CRM file</a><a href="' . esc(url('users.php')) . '">Users</a><a href="' . esc(url('audit.php')) . '">Activity log</a>';

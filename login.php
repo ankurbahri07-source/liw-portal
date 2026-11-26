@@ -24,7 +24,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     }
 }
 page_head('Sign in');
-echo '<div class="login"><h1>Sign in</h1><p class="mut">One login for all Loan in Wallet apps.</p>';
+echo '<div class="login"><div class="brand-badge"><img src="' . esc(url('assets/logo-icon.png')) . '" alt=""><div class="tag">Fast. Easy. Secure.</div></div><h1 style="text-align:center">Sign in</h1><p class="mut" style="text-align:center">One login for all Loan in Wallet apps.</p>';
 if ($err) echo '<div class="err">' . esc($err) . '</div>';
 echo '<form method="post" class="card" autocomplete="on">' . csrf_field()
    . '<label for="u">Username or mobile</label><input id="u" name="username" type="text" autocomplete="username" autofocus required>'
